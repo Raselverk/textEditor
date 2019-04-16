@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/index.css">
+		<title>Text Editor</title>
+	</head>
+
+	<body>
+		<div id="mainBlock">
+			<div id="displayBlock" class="blockStyle">
+				<p>
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+				</p>
+			</div>
+
+			<div id="buttonBlock" class="blockStyle">
+				<button id="editBtn">Edit</button>
+				<button id="styleBtn">Style</button>
+				<button id="safeBtn" disabled>Safe</button>
+				<button id="addBtn" disabled>Add</button>
+				<button id="blockBtn">Block</button>
+			</div>
+
+			<div id="editBlock" class="blockStyle">
+				<textarea></textarea>
+			</div>
+
+			<div id="styleBlock" class="blockStyle">
+				<form name="textSize">
+					<label>Text Size</label>
+
+					<input type="radio" id="12pt" name="fontSize" value="12pt" checked>
+					<label for="12pt">12pt</label>
+
+					<input type="radio" id="14pt" name="fontSize" value="14pt">
+					<label for="14pt">14pt</label>
+
+					<input type="radio" id="16pt" name="fontSize" value="16pt">
+					<label for="16pt">16pt</label>
+
+					<input type="radio" id="18pt" name="fontSize" value="18pt">
+					<label for="18pt">18pt</label>
+				</form>
+
+	            <form name="fontFamily">
+					<label for="fonts">Font Family</label>
+					<select id="fonts">
+	                           <option value="'Merriweather', serif">Merriweather</option>
+	                           <option value="'Felipa', cursive">Felipa</option>
+	                           <option value="'Pacifico', cursive">Pacifico</option>
+	                           <option value="Veranda">Veranda</option>
+	                           <option value="Tahoma">Tahoma</option>
+	               </select>
+	            </form>
+
+				<form name="fontStyle">
+					<label for="bold">Bold</label>
+					<input type="checkbox" id="bold" name="fontWeight">
+					
+					<label for="italic">Italic text</label>
+					<input type="checkbox" id="italic" name="fontStyle">
+
+					<label for="underline">Underline</label>
+					<input type="checkbox" id="underline" name="fontUnderline">
+				</form>
+
+                <form name="pickers">
+					<label for="fontPicker">Color</label>
+	                <input type="color" name="fontPicker" id="fontPicker">
+
+	                <label for="bgPicker">BG Color</label>
+	                <input type="color" name="bgPicker" id="bgPicker">
+            	</form>
+			</div>
+
+			<div id="addBlock" class="blockStyle">
+
+				<h1>Choose what to add:</h1>
+                 
+                <div id="modal">
+					<p>Incorrect input</p>
+				</div>
+
+				<form class="choose">
+					<input type="radio" id="table" name="addTableOrList" value="table" checked>
+					<label for="table">Table</label>
+					<input type="radio" id="list" name="addTableOrList" value="list">
+					<label for="list">List</label>
+				</form>
+
+				<div id="tableForm">
+					<form class="rowCell">
+						<label for="row">Input count of row:</label>
+						<input type="text" id="row" name="row">
+						
+						<label for="cell">Input count of cell:</label>
+						<input type="text" id="cell" name="cell">
+				    </form>
+
+				    <form>
+						<h2>Table style:</h2>
+
+						<label for="cellWidth">Input width of cell:</label>
+						<input type="text" id="cellWidth" name="cellWidth">
+						
+						<label for="cellHeight">Input height of cell:</label>
+						<input type="text" id="cellHeight" name="cellHeight">
+					</form>
+
+					<form>
+						<label for="borderWidth">Border width:</label>
+						<input type="text" id="borderWidth" name="borderWidth">
+
+						<label for="brdrStyle">Border style:</label>
+						<select id="brdrStyle">
+		                           <option value="solid">solid</option>
+		                           <option value="dotted">dotted</option>
+		                           <option value="dashed">dashed</option>
+		                           <option value="double">double</option>
+		                </select>
+
+						<label for="brdrClr">Border color:</label>
+						<select id="brdrClr">
+		                           <option value="black">black</option>
+		                           <option value="red">red</option>
+		                           <option value="blue">blue</option>
+		                </select>
+					</form>
+					<button id="createTableBtn">Create</button>
+				</div>
+
+				<div id="listForm">
+					<form>
+						<h2>Choose type of list:</h2>
+
+						<label for="ul">Unordered list:</label>
+						<input type="radio" id="ul" name="typeOfList" value="ul"  checked>
+
+						<label for="ol">Ordered list:</label>
+						<input type="radio" id="ol" name="typeOfList" value="ol">
+                   </form>
+
+                   <form id="ulType">
+						<label for="ultype">Type of mark:</label>
+						<select id="ultype">
+		                           <option value="circle">circle</option>
+		                           <option value="disc">disc</option>
+		                           <option value="square">square</option>
+		                </select>
+   					</form>
+
+   					<form id="olType">
+						<label for="oltype">Type of mark:</label>
+						<select id="oltype">
+		                           <option value="1">1 2 3</option>
+		                           <option value="A">A B C</option>
+		                           <option value="a">a b c</option>
+		                </select>
+					</form>
+
+					<form>
+	                   <label for="countItems">Input count of list items:</label>
+					   <input type="text" id="countItems" name="countItems">
+					</form>
+
+					<button id="createListBtn">Create</button>
+				</div>	
+			</div>
+		</div>
+
+		<div id="popup">
+			<h1>Enter password</h1>
+			<input type="password" id="pass" name="pwd">
+			<button type="submit" id="passBtn">Enter</button>
+			<span></span>
+		</div>
+
+
+		<script src="js/index.js"></script>	
+	</body>
+</html>

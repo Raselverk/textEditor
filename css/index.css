@@ -1,0 +1,229 @@
+/*MAIN*/
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Merriweather|Felipa|Pacifico');
+
+body {
+    max-width: 1300px;
+    margin: 0 auto;
+    background: #C2F5DD;
+    font-family: 'Playfair Display', serif;
+}
+
+div {
+    padding: 2px 2px;
+    margin-bottom: 20px;
+}
+
+#displayBlock,
+#editBlock,
+#styleBlock,
+#addBlock{
+	 width: 100%;
+     height: 400px;
+} 
+
+.blockStyle {
+    border: 1.2px double black;
+    background: linear-gradient(to top left, #F5FF8F, #FF5B8E);
+    box-shadow: 0.4em 0.4em 5px rgba(122, 122, 122, 0.5);
+    border-radius: 10px;
+}
+
+button {
+    background: linear-gradient(to top left, #E8C18E, #8875F5);
+    width: 90px;
+    height: 45px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0.4em 0.4em 5px rgba(122, 122, 122, 0.5);
+    outline: none;
+}
+
+button:hover{
+	background: #C2F5DD;
+}
+
+input {
+    background: linear-gradient(to top left, #E8C18E, #8875F5);
+    width: 40px;
+}
+
+select {
+    border-radius: 10px;
+    font-size: 19px;
+    text-align: center;
+    outline: none;
+}
+
+#popup{
+	width: 600px;
+	height: 300px;
+	background: linear-gradient(to top left, #E8C18E, #8875F5);
+	text-align: center;
+	box-shadow: 0.4em 0.4em 5px rgba(122, 122, 122, 0.5);
+    border-radius: 10px;
+    position: fixed;
+    top: 100px;
+    left: 400px;
+    display: none;
+}
+
+#popup input{
+	width: 100px;
+	outline: none;
+	background: linear-gradient(to top left, #F5FF8F, #FF5B8E);
+}
+
+#popup span{
+	display: block;
+}
+
+#passBtn{
+	height: 20px;
+	background: linear-gradient(to top left, #F5FF8F, #FF5B8E);
+}
+
+.disabled{
+ pointer-events: none;
+ opacity: 0.4;
+}
+
+#olType{
+	display: none;
+}
+
+#modal{
+    width: 200px;
+    height: 60px;
+    background: linear-gradient(to top left, #E8C18E, #8875F5);  
+    text-align: center;
+    box-shadow: 0.4em 0.4em 5px rgba(122, 122, 122, 0.5);
+    border-radius: 10px;
+    display: none;
+    position: fixed;
+    top: 200px;
+    left: 420px;
+}
+
+#modal p{
+    vertical-align: center;
+}
+
+/*DISPLAYBLOCK*/
+
+#displayBlock {
+    overflow-y: auto;
+}
+
+#displayBlock p{
+	padding:   10px;
+}
+
+a{
+    text-decoration: none;
+    text-align: center;
+}
+
+/*BUTTONBLOCK*/
+
+#buttonBlock {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+
+#buttonBlock button {
+    margin-top: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+/*EDITBLOCK */
+
+textarea {
+    height: 350px;
+    width: 1250px;
+    margin: 20px 20px;
+    border-radius: 10px;
+    outline: none;
+    display: none;
+}
+
+/*STYLEBLOCK*/
+
+#styleBlock{
+	text-align: left;
+	font-size: 26px;
+	display: none;
+}
+
+#styleBlock form {
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+
+/*ADDBLOCK*/
+
+#addBlock{
+    font-size: 20px;
+    margin-right: 40px;
+    display: none;
+}
+
+#addBlock h1{
+	margin-left: 10px;
+}
+
+#addBlock form,
+#addBlock button{
+    padding-left: 10px; 
+}
+
+
+/*ADDBLOCK TABLEFORM*/
+
+div h1{
+	margin-bottom: 25px;
+}
+
+div form{
+	display: block;
+	margin-top: 5px;
+}
+
+#tableForm input,
+#tableForm select{
+    margin-right: 20px;
+}
+
+#tableForm button{
+	margin-left: 10px;
+	margin-top: 10px;
+	display: block;
+}
+
+
+/*ADDBLOCK LISTFORM*/
+
+#listForm h2{
+	margin-top: 0;
+	margin-bottom: 5px;
+}
+
+#listForm form{
+	display: block;
+	margin-top: 10px;
+}
+
+#listForm button{
+    margin-top: 15px;
+	margin-left: 10px;
+}
+
+#listForm {
+    display: none;
+}
+
